@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lezhengqiuyuan.github.io</id>
+    <title>小斑的Git博客</title>
+    <updated>2022-06-28T07:55:46.446Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lezhengqiuyuan.github.io"/>
+    <link rel="self" href="https://lezhengqiuyuan.github.io/atom.xml"/>
+    <subtitle>日常摆烂ing</subtitle>
+    <logo>https://lezhengqiuyuan.github.io/images/avatar.png</logo>
+    <icon>https://lezhengqiuyuan.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 小斑的Git博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu 20.04 更换阿里源]]></title>
+        <id>https://lezhengqiuyuan.github.io/post/ubuntu-2004-geng-huan-a-li-yuan/</id>
+        <link href="https://lezhengqiuyuan.github.io/post/ubuntu-2004-geng-huan-a-li-yuan/">
+        </link>
+        <updated>2022-06-28T07:51:03.000Z</updated>
+        <content type="html"><![CDATA[<p>Ubuntu20.04的换源和Ubuntu18.04有一些不同，不能直接在软件设置中更改（我没找到），所以用了命令行来进行更改，这里参考了</p>
+<p>1、备份/etc/apt/sources.list 文件</p>
+<p>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</p>
+<p>2、编辑/etc/apt/sources.list文件, 我用的vim，也可以用别的编辑器编辑</p>
+<p>sudo vim /etc/apt/sources.list</p>
+<p>3、在文件前面添加下面的条目(阿里源)</p>
+<p>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br>
+deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br>
+deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br>
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br>
+deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br>
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br>
+deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br>
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br>
+deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br>
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</p>
+<p>4、更新</p>
+<p>sudo apt-get update</p>
+<p>5、如果如出现依赖问题</p>
+<p>sudo apt-get -f install</p>
+]]></content>
+    </entry>
+</feed>
